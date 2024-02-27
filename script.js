@@ -1,7 +1,7 @@
 // script //
 
 async function getWeather() {
-    const response = await fetch('http://api.weatherapi.com/v1/current.json?key=17f620f853424267877213311242602&q=Montreal&aqi=no', {mode: 'cors'});
+    const response = await fetch('https://api.weatherapi.com/v1/current.json?key=17f620f853424267877213311242602&q=Montreal&aqi=no', {mode: 'cors'});
     const data = await response.json();
 
     const place = document.querySelector('.place');
@@ -29,7 +29,7 @@ const submit = document.querySelector('#submit');
 submit.addEventListener('click', () => {
     const city = document.querySelector('.city');
     const search = city.value
-    let api = `http://api.weatherapi.com/v1/current.json?key=17f620f853424267877213311242602&q='${search}'&aqi=no`;
+    let api = `https://api.weatherapi.com/v1/current.json?key=17f620f853424267877213311242602&q='${search}'&aqi=no`;
     city.value = '';
 
     async function doSearch() {
