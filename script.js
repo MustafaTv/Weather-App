@@ -49,7 +49,7 @@ submit.addEventListener('click', () => {
         feel.textContent = 'Feels Like : ' + (data.current.feelslike_c) + '°C';
         
         const humidity = document.querySelector('.humidity');
-        humidity.textContent = 'Humidity : ' + (data.current.humidity);
+        humidity.textContent = 'Humidity : ' + (data.current.humidity) + '%';
 
         const wind = document.querySelector('.wind');
         wind.textContent = 'Wind : ' + (data.current.wind_kph) + 'KM/H';
